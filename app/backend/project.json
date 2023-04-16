@@ -1,0 +1,63 @@
+{
+  "name": "app-backend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "app/backend/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/app/backend",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "app/backend/src/main.ts",
+        "tsConfig": "app/backend/tsconfig.app.json",
+        "assets": ["app/backend/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "app-backend:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "app-backend:build:development"
+        },
+        "production": {
+          "buildTarget": "app-backend:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["app/backend/**/*.ts"]
+      }
+    }
+  },
+  "tags": ["backend"]
+}
