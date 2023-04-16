@@ -1,0 +1,20 @@
+{
+  "name": "app-service",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/app-service/src",
+  "prefix": "app-service",
+  "tags": ["app-service"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/app-service/**/*.ts",
+          "libs/app-service/**/*.html"
+        ]
+      }
+    }
+  }
+}

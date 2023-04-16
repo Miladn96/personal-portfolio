@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@@portfolio/app-model": ["libs/app-model/src/index.ts"],
+      "@@portfolio/app-service": ["libs/app-service/src/index.ts"],
+      "@@portfolio/app-state": ["libs/app-state/src/index.ts"],
+      "@@portfolio/utils": ["libs/utils/src/index.ts"],
+      "@@portfolio/web": ["libs/web/src/index.ts"],
+      "@@portfolio/web/ui": ["libs/web/src/lib/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -1,0 +1,20 @@
+{
+  "name": "app-model",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/app-model/src",
+  "prefix": "app-model",
+  "tags": ["app-model"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/app-model/**/*.ts",
+          "libs/app-model/**/*.html"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "app-state",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/app-state/src",
+  "prefix": "app-state",
+  "tags": ["app-state"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/app-state/**/*.ts",
+          "libs/app-state/**/*.html"
+        ]
+      }
+    }
+  }
+}

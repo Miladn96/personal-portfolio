@@ -1,0 +1,17 @@
+{
+  "name": "app-web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/web/src",
+  "prefix": "app-web",
+  "tags": ["app-web"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/web/**/*.ts", "libs/web/**/*.html"]
+      }
+    }
+  }
+}

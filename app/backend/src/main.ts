@@ -1,8 +1,13 @@
+import { ToolbarItemModel } from '@@portfolio/app-model';
 import express from 'express';
 const app = express()
 
 app.get('', (req, res) => {
-  res.send('Backend works')
+  const x: ToolbarItemModel = {
+    path: 'home',
+    title: 'Home',
+  }
+  res.send(x)
 })
 
 

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { RouterModule } from '@angular/router';
+
+import { ItlsToolbarComponent } from '@@portfolio/web/ui';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent],
+  imports: [RouterModule, ItlsToolbarComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'app-ui';
-}
+export class AppComponent {}

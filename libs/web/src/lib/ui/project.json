@@ -1,0 +1,20 @@
+{
+  "name": "web-ui",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/web/src/lib/ui/src",
+  "prefix": "itls",
+  "tags": ["web-ui"],
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/web/src/lib/ui/**/*.ts",
+          "libs/web/src/lib/ui/**/*.html"
+        ]
+      }
+    }
+  }
+}
